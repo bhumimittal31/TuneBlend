@@ -20,7 +20,6 @@ const app = express();
 const stateKey = 'spotify_auth_state';
 const upload = multer({dest : 'uploads/'});
 
-const cors = require('cors');
 app.use(cors({
     origin: 'https://bhumimittal31.github.io'
 }));
