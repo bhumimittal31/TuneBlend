@@ -21,6 +21,7 @@ const app = express();
 const stateKey = 'spotify_auth_state';
 const upload = multer({dest : 'uploads/'});
 
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(cors({
     origin: 'https://bhumimittal31.github.io'
 }));
@@ -37,6 +38,7 @@ const generateRandomString = (length) => {
   }
   return text;
 };
+
 
 app.get('/login', (req, res) => {
   const state = generateRandomString(16);
@@ -126,7 +128,9 @@ exec(`ffmpeg -i ${req.files.video[0].path} -i ${req.files.music[0].path} -c copy
 })
 
 });
-
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
