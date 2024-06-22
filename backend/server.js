@@ -1,5 +1,6 @@
 // backend/server.js
-require('dotenv').config();
+const path = require('path'); //change
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const express = require('express');
 const multer = require('multer');
 const ffmpeg = require('fluent-ffmpeg');
@@ -9,8 +10,9 @@ const querystring = require('querystring');
 const cookieParser = require('cookie-parser');
 const { error } = require('console');
 const cors = require('cors');
-const path = require('path'); //change
 const {exec} = require('child_process');//change
+
+console.log(process.env);
 
 const client_id = process.env.REACT_APP_CLIENT_ID; // Your client id
 const client_secret = process.env.REACT_APP_CLIENT_SECRET; // Your secret
