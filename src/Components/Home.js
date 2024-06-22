@@ -98,31 +98,31 @@ export default function Home() {
             <div className="col mb-3">
               <h5>Features</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Easy to Use</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">High Quality</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Fast Processing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Integration</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Easy to Use</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">High Quality</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Fast Processing</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Integration</a></li>
               </ul>
             </div>
 
             <div className="col mb-3">
               <h5>Quick Links</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Home</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Features</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Pricing</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">FAQs</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">About</a></li>
               </ul>
             </div>
 
             <div className="col mb-3">
               <h5>Follow Us</h5>
               <ul className="nav">
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-facebook"></i> Facebook</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-twitter"></i> Twitter</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-instagram"></i> Instagram</a></li>
-                <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-linkedin"></i> LinkedIn</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-facebook"></i> Facebook</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-twitter"></i> Twitter</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-instagram"></i> Instagram</a></li>
+                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-linkedin"></i> LinkedIn</a></li>
               </ul>
             </div>
           </footer>

@@ -12,7 +12,6 @@ const { error } = require('console');
 const cors = require('cors');
 const {exec} = require('child_process');//change
 
-console.log(process.env);
 
 const client_id = process.env.REACT_APP_CLIENT_ID; // Your client id
 const client_secret = process.env.REACT_APP_CLIENT_SECRET; // Your secret
@@ -110,9 +109,6 @@ app.post('/upload', upload.fields([{name : 'video'}, {name: 'music'}]), (req,res
     if (!req.files.video || !req.files.video[0] || !req.files.music || !req.files.music[0]) {
         return res.status(400).send('Both video and music files are required');
     }
-
-  // const videoStream = req.files.video[0].size;
-  // const musicStream = req.files.music[0].buffer;
   const outputPath = `processed_${Date.now()}.mp4`;
   console.log(req.files.video[0].path); //change
   console.log(req.files.music[0].path);//change
@@ -129,18 +125,6 @@ exec(`ffmpeg -i ${req.files.video[0].path} -i ${req.files.music[0].path} -c copy
   }
 })
 
-  // ffmpeg(videoStream).addInput(musicStream).on('end' , ()=>{
-  //   console.log('Processing completed, sending file...');
-  //   res.download(outputPath , (err) =>{
-  //       if(err) {console.error('Error during download:' , err);}
-  //       // fs.unlink(videoPath,()=>{});
-  //       // fs.unlink(musicPath,()=>{});
-  //       fs.unlink(outputPath,()=>{});
-  //   });
-  // }).on('error' , (err) =>{
-  //   console.error('Error during processing:' , err);
-  //   res.status(500).send('Error during processing');
-  // }).save(outputPath);
 });
 
 const PORT = process.env.PORT || 5000;

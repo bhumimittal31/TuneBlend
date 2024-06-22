@@ -1,13 +1,10 @@
 // frontend/src/App.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom'; //change
+import { HashRouter as Router, Route, Routes,} from 'react-router-dom'; //change
 import UploadForm from './Components/UploadForm';
 import Preview from './Components/Preview';
-import SpotifyTrackSelector from './Components/SpotifyTrackSelector';
 import Navbar from './Components/Navbar';
-import Login from './Components/Login';
-//import Signup from './Components/Signup';
 import Download from './Components/Download'
 import Home from './Components/Home';
 
@@ -32,19 +29,6 @@ function App() {
             }
         }
     }, []);
-
-    // const handleVideoUpload = (e) => {
-    //     setVideoFile(e.target.files[0]);
-    // };
-
-    // const handleMusicUpload = (e) => {
-    //     setMusicTrack(e.target.files[0]);
-    // };
-
-    // const handleTrackSelect = (track) => {
-    //     setSelectedTrack(track);
-    //     // console.log(selectTrack);
-    // };
 
     const handleSubmit = async (e, videoFile, musicTrack, selectTrack) => {
         console.log("Submit button clicked");
@@ -101,12 +85,10 @@ function App() {
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/upload" element={
                     <div>
-                        {/* <h1 style={{textAlign: 'center', marginTop:'50px'}}>Video Music Merger</h1> */}
                         {!accessToken ? (null)
                             : (
                                 <>
                                     <UploadForm accessToken={accessToken} onSubmit={handleSubmit} setVideoFile={setVideoFile} setMusicTrack={setMusicTrack} setSelectedTrack={setSelectedTrack} />
-                                    {/* <SpotifyTrackSelector accessToken={accessToken} onTrackSelect={handleTrackSelect} /> */}
                                     {(videoFile || (musicTrack && selectTrack)) ?
                                         <Preview videoSrc={videoFile ? URL.createObjectURL(videoFile) : null} musicSrc={musicTrack ? URL.createObjectURL(musicTrack) : null} />
                                         : null}
@@ -115,7 +97,6 @@ function App() {
                                             <h2 style={{ textAlign: 'center' }}>ProcessedVideo</h2>
                                             <div style={{ textAlign: 'center', marginTop: '20px', display: 'flex', justifyContent:'center' , alignItems:'center'}}>
                                                 <video controls width="200"><source src={processedVideo} type="video/mp4"></source></video>
-                                                {/* <a href={processedVideo} download="processed_video.mp4"><button style={{marginLeft:'20px'}}>Download Video</button></a> */}
                                             </div>
                                         </div>
                                     )}
