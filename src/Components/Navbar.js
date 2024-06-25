@@ -8,7 +8,7 @@ export default function Navbar({accessToken , handleLogIn}) {
         <div>
             <nav className= 'navbar navbar-expand-lg  bg-light navbar-light' >
                 <div className="container-fluid">
-                    <a className="navbar-brand" htmlFor="#"><img src ={img} style={{ height: '50px'}}></img></a>
+                    <a className="navbar-brand" href="/"><img src ={img} alt='logo' style={{ height: '50px'}}></img></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -18,10 +18,10 @@ export default function Navbar({accessToken , handleLogIn}) {
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" htmlFor="/features">Features</a>
+                                <a className="nav-link" href="/features">Features</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" htmlFor="/editing">Editing</a>
+                                <a className="nav-link" href="/editing">Editing</a>
                             </li>
                         </ul>
                         <div className="d-flex">

@@ -49,7 +49,7 @@ export default function Home() {
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
-                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="/panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                     <strong>Easy to Use</strong>
                   </button>
                 </h2>
@@ -61,7 +61,7 @@ export default function Home() {
               </div>
               <div className="accordion-item">
                 <h2 className="accordion-header">
-                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="/panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                     <strong>High Quality</strong>
                   </button>
                 </h2>
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
               <div className="accordion-item">
                 <h2 className="accordion-header">
-                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="/panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                     <strong>Fast Processing</strong>
                   </button>
                 </h2>
@@ -98,31 +98,31 @@ export default function Home() {
             <div className="col mb-3">
               <h5>Features</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Easy to Use</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">High Quality</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Fast Processing</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Integration</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Easy to Use</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">High Quality</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Fast Processing</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Integration</a></li>
               </ul>
             </div>
 
             <div className="col mb-3">
               <h5>Quick Links</h5>
               <ul className="nav flex-column">
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Home</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Features</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">Pricing</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">FAQs</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted">About</a></li>
+                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-muted">Home</a></li>
+                <li className="nav-item mb-2"><a href="/features" className="nav-link p-0 text-muted">Features</a></li>
+                <li className="nav-item mb-2"><a href="/pricing" className="nav-link p-0 text-muted">Pricing</a></li>
+                <li className="nav-item mb-2"><a href="/faqs" className="nav-link p-0 text-muted">FAQs</a></li>
+                <li className="nav-item mb-2"><a href="/about" className="nav-link p-0 text-muted">About</a></li>
               </ul>
             </div>
 
             <div className="col mb-3">
               <h5>Follow Us</h5>
               <ul className="nav">
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-facebook"></i> Facebook</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-twitter"></i> Twitter</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-instagram"></i> Instagram</a></li>
-                <li className="nav-item mb-2"><a htmlfor="#" className="nav-link p-0 text-muted mx-2"><i className="bi bi-linkedin"></i> LinkedIn</a></li>
+                <li className="nav-item mb-2"><a href="/facebook" className="nav-link p-0 text-muted mx-2"><i className="bi bi-facebook"></i> Facebook</a></li>
+                <li className="nav-item mb-2"><a href="/twitter" className="nav-link p-0 text-muted mx-2"><i className="bi bi-twitter"></i> Twitter</a></li>
+                <li className="nav-item mb-2"><a href="/instagram" className="nav-link p-0 text-muted mx-2"><i className="bi bi-instagram"></i> Instagram</a></li>
+                <li className="nav-item mb-2"><a href="/linkedin" className="nav-link p-0 text-muted mx-2"><i className="bi bi-linkedin"></i> LinkedIn</a></li>
               </ul>
             </div>
           </footer>
