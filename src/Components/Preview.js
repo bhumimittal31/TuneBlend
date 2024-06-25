@@ -1,5 +1,4 @@
 import React from 'react'
-import { flushSync } from 'react-dom'
 
 export default function Preview({ videoSrc, musicSrc }) {
   return (

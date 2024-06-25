@@ -54,9 +54,6 @@ app.get('/login', (req, res) => {
       state: state
     }));
 });
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
 
 
 app.get('/callback', (req, res) => {
