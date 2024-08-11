@@ -48,9 +48,14 @@ function App() {
                     }
                 });
                 const previewUrl = trackResponse.data.preview_url;
-                const preventResponse = await axios.get(previewUrl, { responseType: 'blob' });
-                const spotifytrack = new File([preventResponse.data], 'spotify_track.mp3', { type: 'audio/mpeg' });
-                formData.append('music', spotifytrack);
+                if(previewUrl){
+                    const preventResponse = await axios.get(previewUrl, { responseType: 'blob' });
+                    const spotifytrack = new File([preventResponse.data], 'spotify_track.mp3', { type: 'audio/mpeg' });
+                    formData.append('music', spotifytrack);
+                    //setMusicTrack(URL.createObjectURL(preventResponse.data))
+                }else{
+                    alert('The selected Spotify Track does not have preview available.');
+                }
                 // console.log(formData.get('music'));              
             } catch (error) {
                 console.error('Error fetching spotify track priview:', error);

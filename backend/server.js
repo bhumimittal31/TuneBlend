@@ -108,21 +108,33 @@ app.post('/upload', upload.fields([{name : 'video'}, {name: 'music'}]), (req,res
     if (!req.files.video || !req.files.video[0] || !req.files.music || !req.files.music[0]) {
         return res.status(400).send('Both video and music files are required');
     }
-  const outputPath = `processed_${Date.now()}.mp4`;
+  //const outputPath = `processed_${Date.now()}.mp4`;
+  // Ensure 'processed_videos' directory exists
+  const outputDir = path.join(__dirname, '../processed_videos');
+  if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir);
+  }
+
+  const outputPath = path.join(outputDir, `processed_${Date.now()}.mp4`);//changend
   console.log(req.files.video[0].path); //change
   console.log(req.files.music[0].path);//change
 
   console.log('Processing video and music...');
 
-exec(`ffmpeg -i ${req.files.video[0].path} -i ${req.files.music[0].path} -c copy -map 0:v:0 -map 1:a:0 ${outputPath}`,(err)=>{
+exec(`ffmpeg -i ${req.files.video[0].path} -i ${req.files.music[0].path} -c copy -map 0:v:0 -map 1:a:0 -shortest ${outputPath}`,(err)=>{
   if(err) {console.log(err);}
   else{
     console.log("video merged");
+    const videoUrl = `/processed_videos/${path.basename(outputPath)}`;
+    res.json({videoUrl});
     res.download(outputPath,()=>{
-      console.log("Video downloaded");
+      console.log("Video downloaded", outputPath);
     })
   }
-})
+});
+
+// Serve processed videos for preview
+app.use('/processed_videos', express.static(path.join(__dirname, '../processed_videos')));
 
 });
 app.get('*', (req, res) => {
